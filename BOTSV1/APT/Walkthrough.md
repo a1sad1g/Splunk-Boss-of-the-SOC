@@ -89,7 +89,9 @@ index=botsv1 sourcetype=stream:http src_ip="192.168.250.70" uri="poisonivy-is-co
 
 ### Q106: What IP address has Po1s0n1vy tied to domains that are pre-staged to attack Wayne Enterprises?
 
-**Approach:** 
+**Approach:** Like virustotal of any platform that provide you threat intel information search for any domain associated with the domain that you know it
+
+
 
 
 
