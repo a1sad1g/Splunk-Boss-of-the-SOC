@@ -50,3 +50,21 @@ index=botsv1 sourcetype=stream:http imreallynotbatman.com scanning src_ip="40.80
 
 ![Q102](../Screenshot/Company_name.png)
 
+### Q103: What content management system is imreallynotbatman.com likely using??
+
+**Approach:** Look at the URIs the scanner and visitors requested. CMS platforms have recognisable path structures.
+
+```spl
+index=botsv1 sourcetype=stream:http imreallynotbatman.com scanning src_ip="40.80.148.42"
+```
+
+**Finding:** **Joomla**.
+
+
+![Q103](../Screenshot/Contant_managment_system.png)
+
+**Phase takeaway:** One IP generating high-volume automated requests is the reconnaissance stage.
+
+
+
+
