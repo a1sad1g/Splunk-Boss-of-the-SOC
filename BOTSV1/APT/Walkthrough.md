@@ -61,7 +61,7 @@ index=botsv1 sourcetype=stream:http imreallynotbatman.com scanning src_ip="40.80
 **Finding:** **Joomla**.
 
 
-![Q103](../Screenshot/Contant_managment_system.png)
+![Q103](../Screenshot/Content_management_system.png)
 
 **Phase takeaway:** One IP generating high-volume automated requests is the reconnaissance stage.
 
