@@ -89,7 +89,13 @@ index=botsv1 sourcetype=stream:http src_ip="192.168.250.70" uri="poisonivy-is-co
 
 ### Q106: What IP address has Po1s0n1vy tied to domains that are pre-staged to attack Wayne Enterprises?
 
-**Approach:** Like virustotal of any platform that provide you threat intel information search for any domain associated with the domain that you know it
+**Approach:** The server upload the image from `23.22.63.114` and he involving with the Po1s0n1vy group
+
+**Answer:** `23.22.63.114`
+
+### Q107: Based on the data gathered from this attack and common open source intelligence sources for domain names, what is the email address that is most likely associated with Po1s0n1vy APT group?
+
+**Approach:** 
 
 
 
