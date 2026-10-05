@@ -48,7 +48,6 @@ index=botsv1 earliest=0
 | sort - count
 ```
 
-> The dataset is several GB, so allow time for download and indexing.
 
 ## Tools and References
 
