@@ -35,5 +35,5 @@ Po1s0n1vy scanned the Wayne Enterprises web server for vulnerabilities, identifi
 | Actions on objectives | Website defaced with a custom image | 104 |
 | Attribution / OSINT | Related malware and whois details pivoted from the attacker's infrastructure | 106-107, 111-113 |
 
-Timing detail: the correct password (`batman`) was first tried from `23.22.63.114` at `2016-08-11 02:46:33.689`, and the successful login came from `40.80.148.42` at `2016-08-11 02:48:05.858`.
+
 
