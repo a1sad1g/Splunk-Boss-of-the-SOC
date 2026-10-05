@@ -22,7 +22,6 @@ index=botsv1 earliest=0
 
 ---
 
-## Phase 1: Reconnaissance (Q101-103)
 
 ### Q101: What is the likely IP address of someone from the Po1s0n1vy group scanning imreallynotbatman.com for web application vulnerabilities?
 
@@ -64,6 +63,31 @@ index=botsv1 sourcetype=stream:http imreallynotbatman.com scanning src_ip="40.80
 ![Q103](../Screenshot/Content_management_system.png)
 
 **Phase takeaway:** One IP generating high-volume automated requests is the reconnaissance stage.
+
+### Q104: What is the name of the file that defaced the imreallynotbatman.com website?
+
+
+
+
+### Q105: This attack used dynamic DNS to resolve to the malicious IP. What fully qualified domain name (FQDN) is associated with this attack?
+
+
+
+
+
+
+
+### Q109: What is the name of the executable uploaded by Po1s0n1vy?
+
+**Approach:** Executables running on the server show up in Sysmon process creation events. Search Sysmon for the attacker IP and `exe`.
+
+```spl
+index=botsv1 sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational" 23.22.63.114 exe
+```
+
+**Finding:** `3791.exe`.
+
+![Q109](../Screenshot/Executable_file.png)
 
 
 
