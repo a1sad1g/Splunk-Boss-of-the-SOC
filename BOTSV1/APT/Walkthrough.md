@@ -36,7 +36,7 @@ index=botsv1 sourcetype=stream:http imreallynotbatman.com
 
 **Answer:** `40.80.148.42` is the top source by request volume.
 
-![Q101](../Screenshots/source_ip.png)
+![Q101](../Screenshot/source_ip.png)
 
 ### Q102: What company created the web vulnerability scanner used by Po1s0n1vy?
 
@@ -48,5 +48,5 @@ index=botsv1 sourcetype=stream:http imreallynotbatman.com scanning src_ip="40.80
 
 **Finding:** The traffic identifies the scanner as **Acunetix**, so the company is Acunetix.
 
-![Q102](../Screenshots/Company_name.png)
+![Q102](../Screenshot/Company_name.png)
 
