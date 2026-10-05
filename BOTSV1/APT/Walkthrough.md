@@ -45,7 +45,7 @@ index=botsv1 sourcetype=stream:http imreallynotbatman.com
 index=botsv1 sourcetype=stream:http imreallynotbatman.com scanning src_ip="40.80.148.42"
 ```
 
-**Finding:** The traffic identifies the scanner as **Acunetix**, so the company is Acunetix.
+**Answer:** The traffic identifies the scanner as **Acunetix**, so the company is Acunetix.
 
 ![Q102](../Screenshot/Company_name.png)
 
@@ -66,14 +66,30 @@ index=botsv1 sourcetype=stream:http imreallynotbatman.com scanning src_ip="40.80
 
 ### Q104: What is the name of the file that defaced the imreallynotbatman.com website?
 
+**Approach:** The server started to upload an image from an external network(`Attacker IP`) so search with this:
 
+```spl
+index=botsv1 sourcetype=stream:http src_ip="192.168.250.70" | table src_ip dest_ip uri
+```
+**Answer:** `poisonivy-is-coming-for-you-batman.jpeg`
+
+![Q104](../Screenshot/Defaced_file.png)
 
 
 ### Q105: This attack used dynamic DNS to resolve to the malicious IP. What fully qualified domain name (FQDN) is associated with this attack?
 
+**Approach:** The site field contain a FQDN that associated with the attacker
 
+```spl
+index=botsv1 sourcetype=stream:http src_ip="192.168.250.70" uri="poisonivy-is-coming-for-you-batman.jpeg
+```
+**Answer:** `prankglassinebracket.jumpingcrab.com`
 
+![Q105](../Screenshot/FQDN.png)
 
+### Q106: What IP address has Po1s0n1vy tied to domains that are pre-staged to attack Wayne Enterprises?
+
+**Approach:** 
 
 
 
