@@ -24,7 +24,7 @@ index=botsv1 earliest=0
 
 ## Phase 1: Reconnaissance (Q101-103)
 
-### Q101: 101- What is the likely IP address of someone from the Po1s0n1vy group scanning imreallynotbatman.com for web application vulnerabilities?
+### Q101: What is the likely IP address of someone from the Po1s0n1vy group scanning imreallynotbatman.com for web application vulnerabilities?
 
 **Approach:** The target domain is named in the question, so search web traffic for it and count requests per source IP. A scanner generates far more requests than a normal visitor.
 
@@ -36,6 +36,17 @@ index=botsv1 sourcetype=stream:http imreallynotbatman.com
 
 **Answer:** `40.80.148.42` is the top source by request volume.
 
-![Q101](../screenshots/101.png)
+![Q101](../Screenshots/source_ip.png)
 
+### Q102: What company created the web vulnerability scanner used by Po1s0n1vy?
+
+**Approach:** Narrow to the suspect IP and inspect the raw HTTP events (headers, request paths) for a tool signature.
+
+```spl
+index=botsv1 sourcetype=stream:http imreallynotbatman.com scanning src_ip="40.80.148.42"
+```
+
+**Finding:** The traffic identifies the scanner as **Acunetix**, so the company is Acunetix.
+
+![Q102](../Screenshots/Company_name.png)
 
