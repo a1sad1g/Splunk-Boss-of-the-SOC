@@ -161,9 +161,63 @@ index=botsv1 sourcetype=stream:http src_ip="23.22.63.114" dest_ip="192.168.250.7
 
 ### Q115: One of the passwords in the brute force attack is James Brodsky's favorite Coldplay song. Hint: we are looking for a six character word on this one. Which is it? 
 
-**Approach:** 
+**Approach:** With someone who Know Coldplay song and the hint says that the password is with six character I Know the right password is
 
+```spl
+index=botsv1 sourcetype=stream:http src_ip="23.22.63.114" dest_ip="192.168.250.70" http_method="POST" form_data="*passwd=yellow*" | table _time form_data
+```
 
+**Answer:** `yellow`
+
+![Coldplay](../Screenshot/Coldplay_song.png)
+
+### Q116: What was the correct password for admin access to the content management system running "imreallynotbatman.com"?
+
+```spl
+index=botsv1 sourcetype=stream:http http_method="POST" form_data="*passwd*"  src_ip="40.80.148.42" | table src_ip form_data
+```
+
+**Answer:** `batman`
+
+![Batman](../Screenshot/Admin_password.png)
+
+### Q117: What was the average password length used in the password brute forcing attempt? 
+
+```spl
+index=botsv1 sourcetype=stream:http imreallynotbatman src_ip="23.22.63.114" form_data="*passwd*" | rex field=form_data "passwd=(?<password>[^&]+)" | eval password_length=len(password) | stats avg(password_length) AS average_password_length
+```
+
+**Answer:** `6`
+
+![Average](../Screenshot/Average.png)
+
+### Q118: How many seconds elapsed between the time the brute force password scan identified the correct password and the compromised login?
+
+This spl for the first time for successful brute force 
+
+```spl
+index=botsv1 sourcetype=stream:http imreallynotbatman src_ip="23.22.63.114" form_data="*passwd=batman*" | table _time form_data
+```
+![time](../Screenshot/time_for_successfuly_brute_force.png)
+
+This for the time of first login
+
+```spl
+index=botsv1 sourcetype=stream:http imreallynotbatman src_ip="40.80.148.42" form_data="*passwd=batman*" | table _time form_data
+```
+![Time](../Screenshot/time_for_login.png)
+
+**Answer:** `92.16`
+
+### Q119: How many unique passwords were attempted in the brute force attempt?
+
+```spl
+index=botsv1 sourcetype=stream:http imreallynotbatman src_ip="23.22.63.114" form_data="*passwd*" | rex field=form_data "passwd=(?<password>[^&]+)" | stats dc(password) AS unique_passwords
+```
+
+**Answer:** `412`
+
+![passwords](../Screenshot/unique_password.png)
 
 
 
