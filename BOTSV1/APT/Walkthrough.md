@@ -128,6 +128,19 @@ index=botsv1 sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational" 23
 
 ### Q110: What is the MD5 hash of the executable uploaded?
 
+**Approach:** The MD5 hash is on the sysmon search it with this spl
+
+```spl
+index=botsv1 sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational" 3791.exe
+```
+![MD5](../Screenshot/MD5_hash.png)
+
+**Answer:** `59A1D4FACD7B333F76C4142CD42D3ABA`
+
+### Q111: GCPD reported that common TTPs (Tactics, Techniques, Procedures) for the Po1s0n1vy APT group, if initial compromise fails, is to send a spear phishing email with custom malware attached to their intended target. This malware is usually connected to Po1s0n1vys initial attack infrastructure. Using research techniques, provide the SHA256 hash of this malware.?
+
+
+
 
 
 
