@@ -1,4 +1,4 @@
-# BOTS v1 APT Walkthrough: Step-by-Step Investigation
+7# BOTS v1 APT Walkthrough: Step-by-Step Investigation
 
 This walkthrough follows the investigation in the order an analyst would work it: from first signs of scanning, through the brute force and compromise, to the OSINT pivots. Each step has the reasoning, the SPL, and a screenshot.
 
@@ -18,7 +18,7 @@ index=botsv1 earliest=0
 
 **Why:** Shows which sources are available (`stream:http`, `suricata`, `iis`, `fgt_utm`, Sysmon, and so on). Web attack questions point to `stream:http`; endpoint questions point to Sysmon.
 
-![Sourcetype overview](../screenshots/sourcetypes.png)
+![Sourcetype overview](../Screenshot/sourcetype.png)
 
 ---
 
