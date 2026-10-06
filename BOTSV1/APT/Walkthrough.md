@@ -151,6 +151,18 @@ index=botsv1 sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational" 23
 
 ### Q114: What was the first brute force password used?
 
+```spl
+index=botsv1 sourcetype=stream:http src_ip="23.22.63.114" dest_ip="192.168.250.70" http_method="POST" form_data="*passwd*" | table _time form_data | sort - _time
+```
+
+**Answer:** `123456`
+
+![First_brute_force](../Screenshot/first_password.png)
+
+### Q115: One of the passwords in the brute force attack is James Brodsky's favorite Coldplay song. Hint: we are looking for a six character word on this one. Which is it? 
+
+**Approach:** 
+
 
 
 
