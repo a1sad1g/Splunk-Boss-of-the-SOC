@@ -126,19 +126,6 @@ index=botsv1 sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational" 23
 
 ![Q109](../Screenshot/Executable_file.png)
 
-### Q110: What is the MD5 hash of the executable uploaded?
-
-**Approach:** 
-
-```spl
-
-```
-![MD5](../Screenshot/)
-
-**Answer:** 
-
-### Q111: GCPD reported that common TTPs (Tactics, Techniques, Procedures) for the Po1s0n1vy APT group, if initial compromise fails, is to send a spear phishing email with custom malware attached to their intended target. This malware is usually connected to Po1s0n1vys initial attack infrastructure. Using research techniques, provide the SHA256 hash of this malware.?
-
 
 
 ### Q112: What special hex code is associated with the customized malware discussed in question 111?
